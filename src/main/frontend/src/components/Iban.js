@@ -8,8 +8,8 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Stack from '@mui/material/Stack';
 
 export default function Iban() {
-    const paperStyle = { padding: '50px', width: 600, margin: '20px auto' };
-    const divStyle = { width: 600, margin: '20px 0 20px 0' };
+    const paperStyle = { padding: '50px', margin: '20px auto' };
+    const divStyle = { margin: '20px 0 20px 0' };
     const [iban, setIban] = useState('')
     const [data, setData] = useState([])
     const [error, setError] = useState([])
@@ -37,18 +37,19 @@ export default function Iban() {
     }
 
     return (
-        <Container>
+        <Container maxWidth="md">
             {typeof error.message !== 'undefined' && (< Typography
                 variant="soft"
                 color="danger"
                 startDecorator="🚨"
                 sx={{ fontSize: 'sm', '--Typography-gap': '0.5rem', p: 1 }}
+                margin='20px 0 20px 0'
             >
                 {error.message}
             </Typography>)}
 
             <Paper elevation={3} style={paperStyle}>
-                <Typography level='h1' color='primary' gutterBottom>IBAN Validator</Typography>
+                <Typography level='h1' color='primary' gutterBottom  sx={{ fontSize: 'xl' }}>IBAN Validator</Typography>
                 <TextField id="outlined-basic" label="IBAN" variant="outlined" fullWidth
                     value={iban} onChange={(e) => setIban(e.target.value)} style={divStyle} />
                 <Stack spacing={2}>
