@@ -1,0 +1,8 @@
+localhost:8080/h2-console/login.jsp (password: password)
+http://localhost:8080/swagger-ui/index.html#/verify-iban-controller/verifyIBAN
+http://localhost:8080/v3/api-docs
+http://localhost:3000/
+
+
+<nodeVersion>v22.11.0</nodeVersion>
+<npmVersion>10.9.0</npmVersion>
